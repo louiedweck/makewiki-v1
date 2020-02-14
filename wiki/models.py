@@ -21,6 +21,8 @@ class Page(models.Model):
     modified = models.DateTimeField(auto_now=True,
                                     help_text="The date and time this page was updated. Automatically generated when the model updates.")
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.title
 
